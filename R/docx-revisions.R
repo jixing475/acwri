@@ -182,14 +182,21 @@ find_docx_script <- function() {
 
 #' Find default Python path
 #'
-#' Returns the Python path from the bundled virtual environment.
-#' The .venv is located in the same directory as the Python script.
+#' Returns the Python path with the following priority:
+#' 1. ~/.acwri/python_env/bin/python (recommended default)
+#' 2. inst/docx2md/.venv/bin/python (backward compatibility)
+#' 3. system python3 (fallback)
 #' @noRd
 find_default_python <- function() {
-  docx2md_dir <- get_docx2md_dir()
+  # First priority: ~/.acwri/python_env
+  acwri_python <- path(path_home(), ".acwri", "python_env", "bin", "python")
+  if (file_exists(acwri_python)) {
+    return(acwri_python)
+  }
 
+  # Second priority: bundled virtual environment (backward compatibility)
+  docx2md_dir <- get_docx2md_dir()
   if (!is.null(docx2md_dir)) {
-    # Try bundled virtual environment
     venv_python <- path(docx2md_dir, ".venv", "bin", "python")
     if (file_exists(venv_python)) {
       return(venv_python)

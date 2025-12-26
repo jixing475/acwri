@@ -1,0 +1,53 @@
+Package: acwri
+Title: Academic Writing Tools for R User
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Jixing", "Liu", , "jixing475@gmail.com", role = c("aut", "cre"))
+  )
+Description: A collection of tools for academic writing in R. This package
+    integrates various utilities to streamline the academic writing workflow,
+    including document setup, formatting, and other helpful functions.
+License: MIT + file LICENSE
+Depends:
+    R (>= 4.1)
+Imports:
+    acwri,
+    base,
+    cli,
+    clipr,
+    crayon,
+    curl,
+    desc,
+    fs,
+    gert,
+    gh,
+    glue (>= 1.3.0),
+    jsonlite,
+    lifecycle,
+    magick,
+    pkgload,
+    purrr,
+    quarto,
+    rappdirs,
+    rlang,
+    rmarkdown,
+    roxygen2,
+    rprojroot,
+    rstudioapi,
+    spelling,
+    stats,
+    testthat,
+    tools,
+    utils,
+    whisker,
+    withr,
+    yaml
+Suggests:
+    covr,
+    knitr
+Config/testthat/edition: 3
+Config/testthat/parallel: TRUE
+Encoding: UTF-8
+Language: en-US
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3

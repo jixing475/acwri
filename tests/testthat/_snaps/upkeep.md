@@ -1,0 +1,166 @@
+# tidy upkeep bullets don't change accidentally
+
+    Code
+      writeLines(tidy_upkeep_checklist())
+    Output
+      ### To begin
+      
+      * [ ] `acwri::pr_init("upkeep-2025-01")`
+      
+      ### Pre-history
+      
+      * [ ] `acwri::use_readme_rmd()`
+      * [ ] `acwri::use_roxygen_md()`
+      * [ ] `acwri::use_github_links()`
+      * [ ] `acwri::use_pkgdown_github_pages()`
+      * [ ] `acwri::use_tidy_github_labels()`
+      * [ ] `urlchecker::url_check()`
+      
+      ### 2020
+      
+      * [ ] `acwri::use_package_doc()`
+      * [ ] `acwri::use_testthat(3)`
+      * [ ] Align the names of `R/` files and `test/` files
+      
+      ### 2021
+      
+      * [ ] Remove check environments section from `cran-comments.md`
+      * [ ] Use lifecycle instead of artisanal deprecation messages
+      
+      ### 2022
+      
+      * [ ] Handle and close any still-open `master` --> `main` issues
+      * [ ] `acwri:::use_codecov_badge("OWNER/REPO")`
+      * [ ] Update pkgdown site using instructions at <https://tidytemplate.tidyverse.org>
+      * [ ] Update lifecycle badges with more accessible SVGs: `acwri::use_lifecycle()`
+      
+      ### 2023
+      
+      * [ ] Update email addresses *@rstudio.com -> *@posit.co
+      * [ ] Update copyright holder in DESCRIPTION: `person("Posit Software, PBC", role = c("cph", "fnd"))`
+      * [ ] Run `devtools::document()` to re-generate package-level help topic with DESCRIPTION changes
+      * [ ] `acwri::use_tidy_logo(); pkgdown::build_favicons(overwrite = TRUE)`
+      * [ ] `acwri::use_tidy_coc()`
+      * [ ] Use `pak::pak("OWNER/REPO")` in README
+      * [ ] Consider running `acwri::use_tidy_dependencies()` and/or replace compat files with `use_standalone()`
+      * [ ] Use cli errors or [file an issue](new) if you don't have time to do it now
+      * [ ] `acwri::use_standalone("r-lib/rlang", "types-check")` instead of home grown argument checkers;
+      or [file an issue](new) if you don't have time to do it now
+      * [ ] Add alt-text to pictures, plots, etc; see https://posit.co/blog/knitr-fig-alt/ for examples
+      
+      ### 2025
+      
+      * [ ] `acwri::use_air()` <https://posit-dev.github.io/air/>
+      * [ ] `acwri::use_package("R", "Depends", "4.1")`
+      * [ ] Switch to the base pipe (`|>`)
+      * [ ] Switch to the base anonymous function syntax (`\(x)`) 
+      * [ ] Add ROR for Posit in `DESCRIPTION`:
+      `person("Posit Software, PBC", role = c("cph", "fnd"), comment = c(ROR = "03wc8by49"))`
+      * [ ] Convert in-header chunk options to the newer in-body style used by Quarto:
+      `fs::dir_ls("vignettes", regexp = "[.][Rq]md$") |> purrr::walk(\(x) knitr::convert_chunk_header(x, output = identity, type = "yaml"))`
+      * [ ] Switch to `expect_snapshot(error = TRUE)` instead of calling `expect_error()` without specifying `class =`
+      
+      ### To finish
+      
+      * [ ] `acwri::use_mit_license()`
+      * [ ] `acwri::use_tidy_description()`
+      * [ ] `acwri::use_tidy_github_actions()`
+      * [ ] `devtools::build_readme()`
+      * [ ] Add alt-text to pictures, plots, etc; see https://posit.co/blog/knitr-fig-alt/ for examples
+      * [ ] [Re-publish released site](https://pkgdown.r-lib.org/dev/articles/how-to-update-released-site.html) if needed
+      
+      <sup>Created on 2025-01-01 with `acwri::use_tidy_upkeep_issue()`, using [acwri v1.1.0](https://acwri.r-lib.org)</sup>
+
+# tidy upkeep omits bullets present in last_upkeep
+
+    Code
+      writeLines(tidy_upkeep_checklist())
+    Output
+      ### To begin
+      
+      * [ ] `acwri::pr_init("upkeep-2025-01")`
+      
+      ### 2023
+      
+      * [ ] Update email addresses *@rstudio.com -> *@posit.co
+      * [ ] Update copyright holder in DESCRIPTION: `person("Posit Software, PBC", role = c("cph", "fnd"))`
+      * [ ] Run `devtools::document()` to re-generate package-level help topic with DESCRIPTION changes
+      * [ ] `acwri::use_tidy_logo(); pkgdown::build_favicons(overwrite = TRUE)`
+      * [ ] `acwri::use_tidy_coc()`
+      * [ ] Use `pak::pak("OWNER/REPO")` in README
+      * [ ] Consider running `acwri::use_tidy_dependencies()` and/or replace compat files with `use_standalone()`
+      * [ ] Use cli errors or [file an issue](new) if you don't have time to do it now
+      * [ ] `acwri::use_standalone("r-lib/rlang", "types-check")` instead of home grown argument checkers;
+      or [file an issue](new) if you don't have time to do it now
+      * [ ] Add alt-text to pictures, plots, etc; see https://posit.co/blog/knitr-fig-alt/ for examples
+      
+      ### 2025
+      
+      * [ ] `acwri::use_air()` <https://posit-dev.github.io/air/>
+      * [ ] `acwri::use_package("R", "Depends", "4.1")`
+      * [ ] Switch to the base pipe (`|>`)
+      * [ ] Switch to the base anonymous function syntax (`\(x)`) 
+      * [ ] Add ROR for Posit in `DESCRIPTION`:
+      `person("Posit Software, PBC", role = c("cph", "fnd"), comment = c(ROR = "03wc8by49"))`
+      * [ ] Convert in-header chunk options to the newer in-body style used by Quarto:
+      `fs::dir_ls("vignettes", regexp = "[.][Rq]md$") |> purrr::walk(\(x) knitr::convert_chunk_header(x, output = identity, type = "yaml"))`
+      * [ ] Switch to `expect_snapshot(error = TRUE)` instead of calling `expect_error()` without specifying `class =`
+      
+      ### To finish
+      
+      * [ ] `acwri::use_mit_license()`
+      * [ ] `acwri::use_tidy_description()`
+      * [ ] `acwri::use_tidy_github_actions()`
+      * [ ] `devtools::build_readme()`
+      * [ ] Add alt-text to pictures, plots, etc; see https://posit.co/blog/knitr-fig-alt/ for examples
+      * [ ] [Re-publish released site](https://pkgdown.r-lib.org/dev/articles/how-to-update-released-site.html) if needed
+      
+      <sup>Created on 2025-01-01 with `acwri::use_tidy_upkeep_issue()`, using [acwri v1.1.0](https://acwri.r-lib.org)</sup>
+
+# upkeep bullets don't change accidentally
+
+    Code
+      writeLines(upkeep_checklist())
+    Output
+      * [ ] `acwri::use_readme_rmd()`
+      * [ ] `acwri::use_github_links()`
+      * [ ] `acwri::use_pkgdown_github_pages()`
+      * [ ] `acwri::use_tidy_description()`
+      * [ ] `acwri::use_package_doc()`
+      Consider letting acwri manage your `@importFrom` directives here. `acwri::use_import_from()` is handy for this.
+      * [ ] `acwri::use_testthat()`. Learn more about testing at <https://r-pkgs.org/tests.html>
+      * [ ] Align the names of `R/` files and `test/` files for workflow happiness. The docs for `acwri::use_r()` include a helpful script. `acwri::rename_files()` may be be useful.
+      * [ ] `acwri::use_code_of_conduct()`
+      * [ ] Add alt-text to pictures, plots, etc; see <https://posit.co/blog/knitr-fig-alt/> for examples
+      
+      Set up or update GitHub Actions. \
+            Updating workflows to the latest version will often fix troublesome actions:
+      * [ ] `acwri::use_github_action('check-standard')`
+      
+      <sup>Created on 2023-01-01 with `acwri::use_upkeep_issue()`, using [acwri v1.1.0](https://acwri.r-lib.org)</sup>
+
+---
+
+    Code
+      writeLines(checklist)
+    Output
+      * [ ] `acwri::use_readme_rmd()`
+      * [ ] `acwri::use_github_links()`
+      * [ ] `acwri::use_pkgdown_github_pages()`
+      * [ ] `acwri::use_tidy_description()`
+      * [ ] `acwri::use_package_doc()`
+      Consider letting acwri manage your `@importFrom` directives here. `acwri::use_import_from()` is handy for this.
+      * [ ] `acwri::use_testthat(3)` and upgrade to 3e, [testthat 3e vignette](https://testthat.r-lib.org/articles/third-edition.html)
+      * [ ] Align the names of `R/` files and `test/` files for workflow happiness. The docs for `acwri::use_r()` include a helpful script. `acwri::rename_files()` may be be useful.
+      * [ ] Consider changing default branch from `master` to `main`
+      * [ ] Remove description of test environments from `cran-comments.md`.
+      See `acwri::use_cran_comments()`.
+      * [ ] Add alt-text to pictures, plots, etc; see <https://posit.co/blog/knitr-fig-alt/> for examples
+      
+      Set up or update GitHub Actions. \
+            Updating workflows to the latest version will often fix troublesome actions:
+      * [ ] `acwri::use_github_action('check-standard')`
+      * [ ] `acwri::use_github_action('test-coverage')`
+      
+      <sup>Created on 2023-01-01 with `acwri::use_upkeep_issue()`, using [acwri v1.1.0](https://acwri.r-lib.org)</sup>
+

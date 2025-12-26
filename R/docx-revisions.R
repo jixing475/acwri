@@ -100,9 +100,10 @@ extract_docx_revisions <- function(
     ) {
       ui_abort(c(
         "x" = "Python dependency {.pkg docx2python} is not installed.",
-        "i" = "Please run the following command to install:",
-        " " = "{.code uv pip install docx2python}",
-        "i" = "Or see {.path inst/docx2md/README.md} for setup instructions."
+        "i" = "Please install it using one of the following commands:",
+        " " = "{.code pip install docx2python}",
+        " " = "{.code pip3 install docx2python}",
+        "i" = "Or use uv: {.code uv pip install docx2python}"
       ))
     }
     ui_abort(c(
@@ -125,36 +126,74 @@ extract_docx_revisions <- function(
 }
 
 
-#' Find Python script path
+#' Get docx2md directory path
+#'
+#' Finds the docx2md directory containing the Python script and virtual environment.
+#' Works both during development (inst/docx2md) and after installation.
 #' @noRd
-find_docx_script <- function() {
-  script_path <- tryCatch(
-    path_package(package = "acwri", "docx2md", "extract_docx_track_changes.py"),
+get_docx2md_dir <- function() {
+  # Try installed package path first
+  docx2md_dir <- tryCatch(
+    path_package(package = "acwri", "docx2md"),
     error = function(e) NULL
   )
 
-  if (is.null(script_path) || !file_exists(script_path)) {
-    ui_abort(c(
-      "x" = "Could not find Python script {.file extract_docx_track_changes.py}",
-      "i" = "Please ensure {.pkg acwri} is installed correctly."
-    ))
+  if (!is.null(docx2md_dir) && dir_exists(docx2md_dir)) {
+    return(docx2md_dir)
   }
 
-  script_path
+  # Development fallback: look relative to the source file location
+  # This handles the case when running from source (e.g., devtools::load_all)
+  dev_paths <- c(
+    # If we're in the package source directory
+    "inst/docx2md",
+    # Absolute path as last resort
+    "/Users/zero/Desktop/zeroverse/easyPKGs/acwri/inst/docx2md"
+  )
+
+  for (dev_path in dev_paths) {
+    if (dir_exists(dev_path)) {
+      return(normalizePath(dev_path, mustWork = FALSE))
+    }
+  }
+
+  NULL
+}
+
+
+#' Find Python script path
+#' @noRd
+find_docx_script <- function() {
+  docx2md_dir <- get_docx2md_dir()
+
+  if (!is.null(docx2md_dir)) {
+    script_path <- path(docx2md_dir, "extract_docx_track_changes.py")
+    if (file_exists(script_path)) {
+      return(script_path)
+    }
+  }
+
+  ui_abort(c(
+    "x" = "Could not find Python script {.file extract_docx_track_changes.py}",
+    "i" = "Please ensure {.pkg acwri} is installed correctly."
+  ))
 }
 
 
 #' Find default Python path
+#'
+#' Returns the Python path from the bundled virtual environment.
+#' The .venv is located in the same directory as the Python script.
 #' @noRd
 find_default_python <- function() {
-  # Try bundled virtual environment first
-  venv_python <- tryCatch(
-    path_package(package = "acwri", "docx2md", ".venv", "bin", "python"),
-    error = function(e) NULL
-  )
+  docx2md_dir <- get_docx2md_dir()
 
-  if (!is.null(venv_python) && file_exists(venv_python)) {
-    return(venv_python)
+  if (!is.null(docx2md_dir)) {
+    # Try bundled virtual environment
+    venv_python <- path(docx2md_dir, ".venv", "bin", "python")
+    if (file_exists(venv_python)) {
+      return(venv_python)
+    }
   }
 
   # Fall back to system python3

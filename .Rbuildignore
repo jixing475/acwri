@@ -30,4 +30,3 @@
 ^Icon\r?$
 ^\.agent$
 ^openspec$
-^inst/docx2md/\.venv$

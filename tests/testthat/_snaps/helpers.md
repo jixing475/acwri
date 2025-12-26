@@ -59,8 +59,7 @@
     Code
       use_dependency("acwri", "Suggests")
     Message
-      ! Package acwri is already listed in 'Imports' in DESCRIPTION; no change
-        made.
+      ! Package acwri is already listed in 'Imports' in DESCRIPTION; no change made.
 
 # can add LinkingTo dependency if other dependency already exists
 

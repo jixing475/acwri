@@ -78,7 +78,7 @@ test_that("can create package in current directory (literally in '.')", {
   expect_equal(proj_get_(), orig_proj)
 })
 
-## https://github.com/r-lib/acwri/issues/227
+## https://github.com/jixing475/acwri/issues/227
 test_that("create_* works w/ non-existing rel path, open = FALSE case", {
   sandbox <- path_real(dir_create(file_temp("sandbox")))
   orig_proj <- proj_get_()
@@ -106,7 +106,7 @@ test_that("create_* works w/ non-existing rel path, open = FALSE case", {
   expect_equal(path_wd(), sandbox)
 })
 
-# https://github.com/r-lib/acwri/issues/1122
+# https://github.com/jixing475/acwri/issues/1122
 test_that("create_*() works w/ non-existing rel path, open = TRUE, not in RStudio", {
   sandbox <- path_real(dir_create(file_temp("sandbox")))
   orig_proj <- proj_get_()
@@ -151,7 +151,7 @@ test_that("we discourage project creation in home directory", {
 
 test_that("create_quarto_project() works for basic usage", {
   skip_if_not_installed("quarto")
-  skip_if_not(quarto::quarto_available(error = FALSE))
+  skip_if(is.null(quarto::quarto_path()))
 
   dir <- create_local_quarto_project()
   expect_proj_file("_quarto.yml")

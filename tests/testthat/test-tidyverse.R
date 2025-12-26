@@ -1,14 +1,14 @@
 test_that("use_tidy_description() alphabetises dependencies and remotes", {
   pkg <- create_local_package()
-  use_package("acwri")
+  use_package("withr")
   use_package("desc")
-  use_package("withr", "Suggests")
+  use_package("rlang", "Suggests")
   use_package("gh", "Suggests")
   desc::desc_set_remotes(c("r-lib/styler", "jimhester/lintr"))
   use_tidy_description()
   desc <- read_utf8(proj_path("DESCRIPTION"))
-  expect_gt(grep("acwri", desc), grep("desc", desc))
-  expect_gt(grep("withr", desc), grep("gh", desc))
+  expect_gt(grep("withr", desc), grep("desc", desc))
+  expect_gt(grep("rlang", desc), grep("gh", desc))
   expect_gt(grep("r\\-lib\\/styler", desc), grep("jimhester\\/lintr", desc))
 })
 

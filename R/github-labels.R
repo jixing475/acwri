@@ -111,7 +111,7 @@ use_github_labels <- function(
 
     # Can't do this at label level, i.e. "old_label_name --> new_label_name"
     # Fails if "new_label_name" already exists
-    # https://github.com/r-lib/acwri/issues/551
+    # https://github.com/jixing475/acwri/issues/551
     # Must first PATCH issues, then sort out labels
     issues <- map(
       to_rename,

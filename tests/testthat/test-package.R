@@ -42,16 +42,16 @@ test_that("use_dev_package() writes a remote", {
   create_local_package()
   local_ui_yep()
 
-  use_dev_package("acwri")
-  expect_equal(proj_desc()$get_remotes(), "r-lib/acwri")
+  use_dev_package("rlang")
+  expect_equal(proj_desc()$get_remotes(), "r-lib/rlang")
 })
 
 test_that("use_dev_package() can override over default remote", {
   create_local_package()
 
-  use_dev_package("acwri", remote = "github::r-lib/acwri")
+  use_dev_package("acwri", remote = "github::jixing475/acwri")
 
-  expect_equal(proj_desc()$get_remotes(), "github::r-lib/acwri")
+  expect_equal(proj_desc()$get_remotes(), "github::jixing475/acwri")
 })
 
 test_that("package_remote() works for an installed package with github URL", {

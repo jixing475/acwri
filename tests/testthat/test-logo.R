@@ -18,7 +18,7 @@ test_that("use_logo() shows a clickable path with README", {
   expect_snapshot(use_logo("logo.png"), transform = scrub_testpkg)
 })
 
-# https://github.com/r-lib/acwri/issues/1999
+# https://github.com/jixing475/acwri/issues/1999
 test_that("use_logo() writes a file in lowercase and it knows that", {
   skip_if_not_installed("magick")
   skip_on_os("solaris")

@@ -45,7 +45,25 @@ options(acwri.description = list())
 #| eval: false
 library(acwri)
 
-# More usage examples will be added as the package develops
+# Extract track changes from a Word document
+# extract_docx_revisions("manuscript.docx", output = "revisions.md")
+```
+
+## Features
+
+### Word Revisions Extraction
+
+Extract all types of revisions (comments, deletions, insertions, and formatting changes) from a Word document and save them into a Markdown file.
+
+```r
+# Return results as a character vector
+revisions <- extract_docx_revisions("manuscript.docx")
+
+# Or save to a file
+extract_docx_revisions("manuscript.docx", output = "changes.md")
+```
+
+This feature requires Python and the `docx2python` package. Setting up a virtual environment in `inst/docx2md/.venv` is recommended.
 ```
 
 ## Code of Conduct

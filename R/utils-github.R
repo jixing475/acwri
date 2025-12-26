@@ -36,17 +36,17 @@ github_remote_regex <- paste0(
 )
 
 parse_github_remotes <- function(x) {
-  # https://github.com/r-lib/acwri
+  # https://github.com/jixing475/acwri
   #                                    --> https, github.com,      rlib, acwri
-  # https://github.com/r-lib/acwri.git
+  # https://github.com/jixing475/acwri.git
   #                                    --> https, github.com,      rlib, acwri
-  # https://github.com/r-lib/acwri#readme
+  # https://github.com/jixing475/acwri#readme
   #                                    --> https, github.com,      rlib, acwri
-  # https://github.com/r-lib/acwri/issues/1169
+  # https://github.com/jixing475/acwri/issues/1169
   #                                    --> https, github.com,      rlib, acwri
   # https://github.acme.com/r-lib/devtools.git
   #                                    --> https, github.acme.com, rlib, acwri
-  # git@github.com:r-lib/acwri.git
+  # git@github.com:jixing475/acwri.git
   #                                    --> ssh,   github.com,      rlib, acwri
   # ssh://git@github.com/rstudio/packrat.git
   #                                    --> ssh,   github.com,      rlib, acwri

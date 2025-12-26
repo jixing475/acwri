@@ -118,7 +118,7 @@ test_that("write_utf8() can operate outside of a project", {
   expect_no_error(write_utf8(path = "foo", letters[1:3]))
 })
 
-# https://github.com/r-lib/acwri/issues/514
+# https://github.com/jixing475/acwri/issues/514
 test_that("write_utf8() always produces a trailing newline", {
   path <- file_temp()
   write_utf8(path, "x", line_ending = "\n")
@@ -147,7 +147,7 @@ test_that("write_union() adds lines", {
   expect_setequal(read_utf8(tmp), letters[1:5])
 })
 
-# https://github.com/r-lib/acwri/issues/526
+# https://github.com/jixing475/acwri/issues/526
 test_that("write_union() doesn't remove duplicated lines in the input", {
   tmp <- file_temp()
   before <- rep(letters[1:2], 3)

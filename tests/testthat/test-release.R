@@ -105,7 +105,7 @@ test_that("can find milestone numbers", {
 
   tr <- list(
     repo_owner = "r-lib",
-    repo_name = "acwri",
+    repo_name = "usethis",
     api_url = "https://api.github.com"
   )
 
@@ -129,7 +129,7 @@ test_that("gh_milestone_number() returns NA when gh() errors", {
   )
   tr <- list(
     repo_owner = "r-lib",
-    repo_name = "acwri",
+    repo_name = "usethis",
     api_url = "https://api.github.com"
   )
   expect_true(is.na(gh_milestone_number(tr, "1.1.1")))

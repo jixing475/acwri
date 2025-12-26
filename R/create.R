@@ -242,10 +242,10 @@ create_quarto_project <- function(
 #' @export
 #' @examples
 #' \dontrun{
-#' create_from_github("r-lib/acwri")
+#' create_from_github("jixing475/acwri")
 #'
 #' # repo_spec can be a URL
-#' create_from_github("https://github.com/r-lib/acwri")
+#' create_from_github("https://github.com/jixing475/acwri")
 #'
 #' # a URL repo_spec also specifies the host (e.g. GitHub Enterprise instance)
 #' create_from_github("https://github.acme.com/OWNER/REPO")

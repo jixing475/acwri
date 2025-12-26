@@ -57,7 +57,7 @@ test_that("we message for version change and are silent for same version", {
   )
 })
 
-## https://github.com/r-lib/acwri/issues/99
+## https://github.com/jixing475/acwri/issues/99
 test_that("use_dependency() upgrades a dependency", {
   create_local_package()
   withr::local_options(acwri.quiet = FALSE)
@@ -70,7 +70,7 @@ test_that("use_dependency() upgrades a dependency", {
   expect_no_match(desc::desc_get("Suggests"), "acwri")
 })
 
-## https://github.com/r-lib/acwri/issues/99
+## https://github.com/jixing475/acwri/issues/99
 test_that("use_dependency() declines to downgrade a dependency", {
   create_local_package()
   withr::local_options(acwri.quiet = FALSE)
@@ -107,7 +107,7 @@ test_that("use_dependency() does not fall over on 2nd LinkingTo request", {
   expect_snapshot(use_dependency("rlang", "LinkingTo"))
 })
 
-# https://github.com/r-lib/acwri/issues/1649
+# https://github.com/jixing475/acwri/issues/1649
 test_that("use_dependency() can level up a LinkingTo dependency", {
   create_local_package()
 

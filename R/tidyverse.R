@@ -233,17 +233,17 @@ use_dot_github <- function(ignore = TRUE) {
 #' # active project, interval = since a specific datetime
 #' use_tidy_thanks(from = "2020-07-24T00:13:45Z")
 #'
-#' # r-lib/acwri, interval = since a certain date
-#' use_tidy_thanks("r-lib/acwri", from = "2020-08-01")
+#' # jixing475/acwri, interval = since a certain date
+#' use_tidy_thanks("jixing475/acwri", from = "2020-08-01")
 #'
-#' # r-lib/acwri, up to a specific release
-#' use_tidy_thanks("r-lib/acwri", from = NULL, to = "v1.1.0")
+#' # jixing475/acwri, up to a specific release
+#' use_tidy_thanks("jixing475/acwri", from = NULL, to = "v1.1.0")
 #'
-#' # r-lib/acwri, since a specific commit, up to a specific date
-#' use_tidy_thanks("r-lib/acwri", from = "08a560d", to = "2018-05-14")
+#' # jixing475/acwri, since a specific commit, up to a specific date
+#' use_tidy_thanks("jixing475/acwri", from = "08a560d", to = "2018-05-14")
 #'
-#' # r-lib/acwri, but with copy/paste of a browser URL
-#' use_tidy_thanks("https://github.com/r-lib/acwri")
+#' # jixing475/acwri, but with copy/paste of a browser URL
+#' use_tidy_thanks("https://github.com/jixing475/acwri")
 #' }
 use_tidy_thanks <- function(repo_spec = NULL, from = NULL, to = NULL) {
   repo_spec <- repo_spec %||% target_repo_spec()

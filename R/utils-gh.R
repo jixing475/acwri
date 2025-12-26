@@ -64,7 +64,7 @@ default_api_url <- function() {
 
 # handles GitHub Enterprise Cloud, but not GitHub Enterprise Server (which
 # would, I think, require the ability to fully configure this)
-# https://github.com/r-lib/acwri/issues/1897
+# https://github.com/jixing475/acwri/issues/1897
 is_github_enterprise <- function(url) {
   url <- get_baseurl(url)
   url <- normalize_host(url)

@@ -8,11 +8,11 @@ Description: A collection of tools for academic writing in R. This package
     integrates various utilities to streamline the academic writing workflow,
     including document setup, formatting, and other helpful functions.
 License: MIT + file LICENSE
+URL: https://github.com/jixing475/acwri
+BugReports: https://github.com/jixing475/acwri/issues
 Depends:
     R (>= 4.1)
 Imports:
-    acwri,
-    base,
     cli,
     clipr,
     crayon,

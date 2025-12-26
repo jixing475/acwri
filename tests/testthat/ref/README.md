@@ -53,8 +53,8 @@ zip -r foo-explicit-parent.zip foo/
 ```
 
 This is the type of ZIP file that we get from GitHub via links of the
-forms <https://github.com/r-lib/acwri/archive/main.zip> and
-<http://github.com/r-lib/acwri/zipball/main/>.
+forms <https://github.com/jixing475/acwri/archive/main.zip> and
+<http://github.com/jixing475/acwri/zipball/main/>.
 
 Inspect it in the shell:
 
@@ -99,7 +99,7 @@ zip -r foo-implicit-parent.zip foo/*
 ```
 
 Note the use of `foo/*`, as opposed to `foo` or `foo/`. This type of ZIP
-file was reported in <https://github.com/r-lib/acwri/issues/1961>. The
+file was reported in <https://github.com/jixing475/acwri/issues/1961>. The
 example given there is
 <https://agdatacommons.nal.usda.gov/ndownloader/files/44576230>.
 

@@ -3,13 +3,13 @@ test_that("sets version for imports & depends dependencies", {
   withr::local_options(list(repos = c(CRAN = "https://cloud.r-project.org")))
 
   create_local_package()
-  use_package("acwri")
+  use_package("rlang")
   use_package("desc", "Depends")
   use_latest_dependencies()
 
   deps <- proj_deps()
   expect_equal(
-    deps$version[deps$package %in% c("acwri", "desc")] == "*",
+    deps$version[deps$package %in% c("rlang", "desc")] == "*",
     c(FALSE, FALSE)
   )
 })

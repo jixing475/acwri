@@ -221,7 +221,7 @@ test_that("local_project() activates proj til scope ends", {
   expect_null(proj_get_())
 })
 
-# https://github.com/r-lib/acwri/issues/954
+# https://github.com/jixing475/acwri/issues/954
 test_that("proj_activate() works with relative path when RStudio is not detected", {
   sandbox <- path_real(dir_create(file_temp("sandbox")))
   withr::defer(dir_delete(sandbox))
@@ -240,7 +240,7 @@ test_that("proj_activate() works with relative path when RStudio is not detected
   expect_equal(proj_get(), out_path)
 })
 
-# https://github.com/r-lib/acwri/issues/1498
+# https://github.com/jixing475/acwri/issues/1498
 test_that("local_project()'s `quiet` argument works", {
   temp_proj <- create_project(
     file_temp(pattern = "TEMPPROJ"),

@@ -264,7 +264,7 @@ check_no_github_repo <- function(owner, repo, host) {
       # been renamed
       # there's no 404, because of the automatic redirect, but you CAN create
       # a new repo with this name
-      # https://github.com/r-lib/acwri/issues/1893
+      # https://github.com/jixing475/acwri/issues/1893
       repo_info$full_name == spec
     },
     "http_error_404" = function(err) FALSE

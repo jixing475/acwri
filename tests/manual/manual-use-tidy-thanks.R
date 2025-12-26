@@ -5,7 +5,7 @@ library(testthat)
 
 ## test use_tidy_thanks() on a repo with contributors and releases
 thanks <- use_tidy_thanks(
-  "r-lib/acwri",
+  "jixing475/acwri",
   from = "2017-12-01",
   to = "v1.2.0"
 )

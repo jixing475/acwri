@@ -27,7 +27,7 @@ test_that("github_url() works on active project", {
 })
 
 test_that("github_url() strips everything after USER/REPO", {
-  expect_equal(github_url("acwri"), "https://github.com/r-lib/acwri")
+  expect_equal(github_url("acwri"), "https://github.com/jixing475/acwri")
   expect_equal(github_url("gh"), "https://github.com/r-lib/gh")
 })
 

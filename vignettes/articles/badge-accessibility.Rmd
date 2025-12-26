@@ -27,8 +27,8 @@ For example, the badge message might be "passing" or "failing", reflecting the `
 Or the badge could display the current test coverage, as a percentage of lines, and then link to a site where one can explore test coverage line-by-line.
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/r-lib/acwri/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/r-lib/acwri/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/r-lib/acwri/branch/main/graph/badge.svg)](https://app.codecov.io/gh/r-lib/acwri?branch=main)
+[![R-CMD-check](https://github.com/jixing475/acwri/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jixing475/acwri/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/jixing475/acwri/branch/main/graph/badge.svg)](https://app.codecov.io/gh/jixing475/acwri?branch=main)
 <!-- badges: end -->
 
 A key point is that the badge often presents *dynamic* information.
@@ -138,7 +138,7 @@ Finally, and most relevant to acwri, shields.io offers pre-configured dynamic ba
 Here is a shields.io badge for acwri's `R CMD check` workflow on GitHub Actions:
 
 <!-- badges: start -->
-[![my_alt_text-R-CMD-check](https://img.shields.io/github/workflow/status/r-lib/acwri/R-CMD-check?label=my_label-R-CMD-check)](https://github.com/r-lib/acwri/actions/workflows/R-CMD-check.yaml)
+[![my_alt_text-R-CMD-check](https://img.shields.io/github/workflow/status/jixing475/acwri/R-CMD-check?label=my_label-R-CMD-check)](https://github.com/jixing475/acwri/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Again, I am indicating fields I control with `my_alt_text` and `my_label`, so it's easier to get feedback on what acwri should do.
@@ -146,7 +146,7 @@ Again, I am indicating fields I control with `my_alt_text` and `my_label`, so it
 Here is the `title` and `aria-label` of the badge above:
 
 ```{r}
-inspect_badge("https://img.shields.io/github/workflow/status/r-lib/acwri/R-CMD-check?label=my_label-R-CMD-check")
+inspect_badge("https://img.shields.io/github/workflow/status/jixing475/acwri/R-CMD-check?label=my_label-R-CMD-check")
 ```
 
 Now we will take inventory of the main badges inserted by acwri and where things stand re: accessibility.
@@ -158,13 +158,13 @@ We generally obtain the current `R CMD check` status from a GitHub Actions workf
 Here is the official badge provided by GitHub:
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/r-lib/acwri/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/r-lib/acwri/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/jixing475/acwri/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jixing475/acwri/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Here is the `title` and `aria-label` of the badge above:
 
 ```{r}
-inspect_badge("https://github.com/r-lib/acwri/actions/workflows/R-CMD-check.yaml/badge.svg")
+inspect_badge("https://github.com/jixing475/acwri/actions/workflows/R-CMD-check.yaml/badge.svg")
 ```
 
 At the time of writing (late December 2021), the badge does not include such information.
@@ -228,14 +228,14 @@ I would be interested to know if this is a good situation for those using a scre
 Here are examples of those two badges (note that acwri does not use Coveralls, so I'm using a different package to demo):
 
 <!-- badges: start -->
-[![Codecov test coverage](https://codecov.io/gh/r-lib/acwri/branch/main/graph/badge.svg)](https://app.codecov.io/gh/r-lib/acwri?branch=main)
+[![Codecov test coverage](https://codecov.io/gh/jixing475/acwri/branch/main/graph/badge.svg)](https://app.codecov.io/gh/jixing475/acwri?branch=main)
 [![Coveralls test coverage](https://coveralls.io/repos/github/trinker/sentimentr/badge.svg?branch=master)](https://coveralls.io/github/trinker/sentimentr?branch=master)
 <!-- badges: end -->
 
 Here are the `title` and `aria-label` of those badges::
 
 ```{r}
-inspect_badge("https://codecov.io/gh/r-lib/acwri/branch/main/graph/badge.svg")
+inspect_badge("https://codecov.io/gh/jixing475/acwri/branch/main/graph/badge.svg")
 
 inspect_badge("https://coveralls.io/repos/github/trinker/sentimentr/badge.svg?branch=master")
 ```
@@ -245,14 +245,14 @@ At the time of writing (late December 2021), neither badge offers a `title` or `
 Here are badges from shields.io for Codecov and Coveralls:
 
 <!-- badges: start -->
-[![Codecov test coverage](https://img.shields.io/codecov/c/github/r-lib/acwri?label=test%20coverage&logo=codecov)](https://app.codecov.io/gh/r-lib/acwri?branch=main)
+[![Codecov test coverage](https://img.shields.io/codecov/c/github/jixing475/acwri?label=test%20coverage&logo=codecov)](https://app.codecov.io/gh/jixing475/acwri?branch=main)
 [![Coveralls test coverage](https://coveralls.io/repos/github/trinker/sentimentr/badge.svg?branch=master)](https://img.shields.io/coveralls/github/trinker/sentimentr?logo=coveralls)
 <!-- badges: end -->
 
 Here are the `title` and `aria-label` of the shields.io badges::
 
 ```{r}
-inspect_badge("https://img.shields.io/codecov/c/github/r-lib/acwri?label=test%20coverage&logo=codecov")
+inspect_badge("https://img.shields.io/codecov/c/github/jixing475/acwri?label=test%20coverage&logo=codecov")
 
 inspect_badge("https://img.shields.io/coveralls/github/trinker/sentimentr?logo=coveralls")
 ```

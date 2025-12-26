@@ -1,5 +1,5 @@
 # capturing some manual tests re: detecting missing user email or name
-# https://github.com/r-lib/acwri/pull/1721
+# https://github.com/jixing475/acwri/pull/1721
 
 dat <- gert::git_config_global()
 if ("user.name" %in% dat$name) {

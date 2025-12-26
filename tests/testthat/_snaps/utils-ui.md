@@ -451,5 +451,5 @@
     Code
       kv_line("Interesting file", I("{.url {url}}"))
     Message
-      • Interesting file: <https://acwri
+      • Interesting file: [3m[34m<https://acwri.r-lib.org/>[39m[23m
 

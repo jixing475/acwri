@@ -18,7 +18,7 @@ use_git <- function(message = "Initial commit") {
     # hacky but helps prevent a pop-up in Positron, where early attempts to
     # interact with a newly created repo lead to:
     # Git: There are no available repositories
-    # https://github.com/r-lib/acwri/pull/2011#issue-2380380721
+    # https://github.com/jixing475/acwri/pull/2011#issue-2380380721
     if (is_positron()) {
       Sys.sleep(1)
     }

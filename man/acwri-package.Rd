@@ -10,6 +10,14 @@
 
 A collection of tools for academic writing in R. This package integrates various utilities to streamline the academic writing workflow, including document setup, formatting, and other helpful functions.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/jixing475/acwri}
+  \item Report bugs at \url{https://github.com/jixing475/acwri/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Jixing Liu \email{jixing475@gmail.com}
 

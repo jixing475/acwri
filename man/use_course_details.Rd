@@ -91,7 +91,7 @@ eventually lead to a download URL. For more details, see
 Click on the repo's "Clone or download" button, to reveal a "Download ZIP"
 button. Capture this URL, which will have this form:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{https://github.com/r-lib/acwri/archive/main.zip
+\if{html}{\out{<div class="sourceCode">}}\preformatted{https://github.com/jixing475/acwri/archive/main.zip
 }\if{html}{\out{</div>}}
 
 This download link (or a shortlink that points to it) is suitable as input
@@ -100,10 +100,10 @@ eventually lead to a download URL. Here are other links that also lead to
 ZIP download, albeit with a different filenaming scheme (REF could be a
 branch name, a tag, or a SHA):
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{https://github.com/github.com/r-lib/acwri/zipball/HEAD
+\if{html}{\out{<div class="sourceCode">}}\preformatted{https://github.com/github.com/jixing475/acwri/zipball/HEAD
 https://api.github.com/repos/r-lib/rematch2/zipball/REF
 https://api.github.com/repos/r-lib/rematch2/zipball/HEAD
-https://api.github.com/repos/r-lib/acwri/zipball/REF
+https://api.github.com/repos/jixing475/acwri/zipball/REF
 }\if{html}{\out{</div>}}
 
 You can use \code{create_download_url()} to create the "Download ZIP" URL from
@@ -166,8 +166,8 @@ tidy_download("https://github.com/r-lib/rematch2/archive/main.zip")
 tidy_unzip("rematch2-main.zip")
 }
 # GitHub
-create_download_url("https://github.com/r-lib/acwri")
-create_download_url("https://github.com/r-lib/acwri/issues")
+create_download_url("https://github.com/jixing475/acwri")
+create_download_url("https://github.com/jixing475/acwri/issues")
 
 # DropBox
 create_download_url("https://www.dropbox.com/sh/12345abcde/6789wxyz?dl=0")

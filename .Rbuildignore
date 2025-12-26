@@ -27,3 +27,7 @@
 ^\.vscode$
 ^[.]?air[.]toml$
 ^scratch\.R$
+^Icon\r?$
+^\.agent$
+^openspec$
+^inst/docx2md/\.venv$

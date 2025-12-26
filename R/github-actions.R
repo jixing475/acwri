@@ -138,7 +138,7 @@ use_github_action <- function(
     # `ignore = FALSE` because we took care of this at directory level, above
     new <- use_github_file(url, save_as = save_as, ignore = FALSE, open = open)
   } else {
-    # local file case, https://github.com/r-lib/acwri/issues/1548
+    # local file case, https://github.com/jixing475/acwri/issues/1548
     contents <- read_utf8(url)
     new <- write_over(proj_path(save_as), contents)
   }

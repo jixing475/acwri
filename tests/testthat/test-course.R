@@ -227,17 +227,17 @@ test_that("create_download_url() works", {
   )
 
   # GitHub
-  acwri_url <- "https://github.com/r-lib/acwri/zipball/HEAD"
+  acwri_url <- "https://github.com/jixing475/acwri/zipball/HEAD"
   expect_equal(
-    create_download_url("https://github.com/r-lib/acwri"),
+    create_download_url("https://github.com/jixing475/acwri"),
     acwri_url
   )
   expect_equal(
-    create_download_url("https://github.com/r-lib/acwri/issues"),
+    create_download_url("https://github.com/jixing475/acwri/issues"),
     acwri_url
   )
   expect_equal(
-    create_download_url("https://github.com/r-lib/acwri#readme"),
+    create_download_url("https://github.com/jixing475/acwri#readme"),
     acwri_url
   )
 })

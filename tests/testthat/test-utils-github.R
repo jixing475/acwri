@@ -143,7 +143,7 @@ test_that("github_remotes() works", {
   )
 
   # a public remote = no token necessary to get github info
-  use_git_remote("origin", "https://github.com/r-lib/acwri.git")
+  use_git_remote("origin", "https://github.com/r-lib/gh.git")
   expect_no_error(
     grl <- github_remotes()
   )
@@ -168,7 +168,7 @@ test_that("github_remotes() works", {
 })
 
 test_that("github_url_from_git_remotes() is idempotent", {
-  url <- "https://github.com/r-lib/acwri.git"
+  url <- "https://github.com/r-lib/gh.git"
   out <- github_url_from_git_remotes(url)
   expect_equal(out, github_url_from_git_remotes(out))
 })
